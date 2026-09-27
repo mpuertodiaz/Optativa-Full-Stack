@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+var marcaPC = prompt("Dime la marca del pc ");
+
+var modeloPC = prompt("Dime el modelo del pc ");
+
+var descuento =0;
+var precioPC=1000;
+if(marcaPC=="MSI" && modeloPC == "PRESTIGE"){
+    descuento=precioPC*0.05;
+    precioPC=precioPC-descuento
+}
+else if (marcaPC=="HP" && modeloPC =="Pavilion"){
+    descuento=precioPC*0.1;
+    precioPC=precioPC-descuento
+
+}
+alert("Su pc vale "+precioPC)
+
+</script>
+
+</body>
+</html>

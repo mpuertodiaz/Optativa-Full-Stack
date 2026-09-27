@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+var sigue=true;
+var intentos=0;
+var respuesta= prompt("Quien es el autor de las meninas? ");
+while (respuesta!="Velazquez" && intentos < 2){
+respuesta= prompt("Quien es el autor de las meninas? ");
+intentos++;
+
+}
+if(respuesta=="Velazquez"){
+    alert("Correcto!")
+}
+else{
+    alert("Lo siento! La respuesta correcta es Velázquez ")
+}
+
+
+</script>
+
+</body>
+</html>

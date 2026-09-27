@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+var sueldoUsuario = 30;
+var eleccion = -1;
+
+while (eleccion != 0 && sueldoUsuario > 0 && sueldoUsuario < 120) {
+    eleccion = parseInt(prompt("Elige número ,0 para salir: "));
+    if (eleccion == 0) break;
+
+    var apuesta = parseInt(prompt("¿Cuánto deseas apostar? "));
+    alert("Has apostado " + apuesta);
+
+    var dado = parseInt(Math.random()* 6+ 1) ;
+    alert("Ha salido " + dado);
+
+    if (eleccion == dado) {
+        sueldoUsuario += apuesta;
+    } else {
+        sueldoUsuario -= apuesta;
+    }
+    
+    alert("Tu sueldo actual es " + sueldoUsuario);
+}
+</script>
+
+</body>
+</html>
