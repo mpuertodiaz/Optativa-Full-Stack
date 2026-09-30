@@ -21,6 +21,16 @@
                     contenedor.innerHTML += `<p>Hola, ${nombre}</p>`;
                 }
             }
+
+            // Datos extra
+            contenedor.innerHTML += `<p>Total: ${lista.length}</p>`;
+            contenedor.innerHTML += `<p>Primero: ${lista[0].trim()}</p>`;
+            contenedor.innerHTML += `<p>Ultimo: ${lista[lista.length - 1].trim()}</p>`;
+
+            // Consola
+            var copia = [...lista];
+            console.log("Orden normal", copia.sort());
+            console.log("Inverso", copia.reverse());
         }
     </script>
 
