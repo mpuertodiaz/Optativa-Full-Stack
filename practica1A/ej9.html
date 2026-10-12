@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de la compra</title>
+</head>
+<body>
+<h1>Lista de la compra</h1>
+<ul id="lista"></ul>
+<button onclick="anadir()">Añadir</button>
+
+<script>
+function anadir() {
+    let lista = document.getElementById("lista");
+    let producto = prompt("¿Que quieres añadir ");
+    let nuevoLi = document.createElement("li");
+    let nombre = document.createElement("span");
+    let botonSi = document.createElement("button");
+    let botonNo = document.createElement("button");
+
+    nombre.innerHTML = producto + " ";
+    botonSi.innerHTML = "si";
+    botonNo.innerHTML = "no";
+
+    
+    botonSi.onclick = () => {
+        nombre.style.color = "green";
+        nombre.style.fontStyle = "italic";
+        
+    };
+
+    
+    botonNo.onclick = function () {
+        nombre.style.color = "red";
+        nombre.style.fontWeight = "bold";
+        
+    };
+
+    nuevoLi.appendChild(nombre);
+    nuevoLi.appendChild(botonSi);
+    nuevoLi.appendChild(botonNo);
+    lista.appendChild(nuevoLi);
+    console.log(producto);
+}
+</script>
+</body>
+</html>

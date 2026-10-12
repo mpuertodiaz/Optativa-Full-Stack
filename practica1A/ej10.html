@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 10</title>
+<style>
+    .disabled {
+        background-color: gray;
+        color: white;
+    }
+    .enabled {
+        background-color: green;
+        color: white;
+    }
+</style>
+</head>
+<body>
+<div id="contenedor"></div>
+
+<script>
+const productos = [{ id: 1, nombre: 'Patata', precio: 1, imagen: 'patata.jpg' },
+{ id: 2, nombre: 'Cebolla', precio: 1.2, imagen: 'cebolla.jpg' },
+{ id: 3, nombre: 'Calabacin', precio: 2.1, imagen: 'calabacin.jpg' },
+{ id: 4, nombre: 'Fresas', precio: 0.6, imagen: 'fresas.jpg' }];
+
+var contenedor = document.getElementById("contenedor");
+
+
+for (var i = 0; i < productos.length; i++) {
+    var div = document.createElement("div");
+    var texto = document.createElement("p");
+    var imagen = document.createElement("img");
+    var boton = document.createElement("button");
+
+    texto.innerHTML = productos[i].nombre + " - " + productos[i].precio + "€";
+    imagen.setAttribute("src", "img/" + productos[i].imagen);
+    imagen.width = 100;
+    boton.innerHTML = "Disponible";
+    boton.className = "disabled";
+
+    
+    boton.onclick = function () {
+        if (boton.className == "disabled") {
+            boton.className = "enabled";
+        } else {
+            boton.className = "disabled";
+        }
+    };
+
+    div.appendChild(texto);
+    div.appendChild(imagen);
+    div.appendChild(boton);
+    contenedor.appendChild(div);
+}
+console.log(contenedor.children.length);
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 6</title>
+</head>
+<body>
+<p id="parrafo1">JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas.</p>
+<p id="parrafo2">Las funciones de JavaScript pueden mejorar la experiencia del usuario de un sitio web, desde actualizar el contenido hasta animar gráficos.</p>
+<p id="parrafo3">JavaScript es uno de los tres lenguajes principales del desarrollo web, junto con HTML y CSS.</p>
+<span id="verMas" onclick="mostrar()" style="color: blue; cursor: pointer;">Mostrar más...</span>
+
+<script>
+var parrafo2 = document.getElementById("parrafo2");
+var parrafo3 = document.getElementById("parrafo3");
+var verMas = document.getElementById("verMas");
+
+
+parrafo2.style.display = "none";
+parrafo3.style.display = "none";
+
+function mostrar() {
+    
+    if (verMas.innerHTML == "Mostrar más...") {
+        parrafo2.style.display = "block";
+        parrafo3.style.display = "block";
+        verMas.innerHTML = "Mostrar menos";
+    } else {
+        parrafo2.style.display = "none";
+        parrafo3.style.display = "none";
+        verMas.innerHTML = "Mostrar mas";
+    }
+    console.log(verMas.innerHTML);
+}
+</script>
+</body>
+</html>

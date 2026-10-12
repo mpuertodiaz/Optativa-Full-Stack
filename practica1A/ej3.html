@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 3</title>
+</head>
+<body>
+<p id="nombre">Nombre: Manuel</p>
+<p id="apellidos">Apellidos: Puerto Diaz</p>
+<button onclick="correcto()">Correcto</button>
+<button onclick="incorrecto()">Incorrecto</button>
+
+<script>
+var etiquetaNombre = document.getElementById("nombre");
+var etiquetaApellidos = document.getElementById("apellidos");
+
+function correcto() {
+    
+    etiquetaNombre.style.color = "green";
+    etiquetaApellidos.style.color = "green";
+    console.log("verde");
+}
+
+var incorrecto = () => {
+    
+    etiquetaNombre.style.color = "red";
+    etiquetaApellidos.style.color = "red";
+    console.log("rojo");
+};
+</script>
+</body>
+</html>

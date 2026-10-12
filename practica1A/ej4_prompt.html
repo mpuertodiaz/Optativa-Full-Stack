@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio</title>
+</head>
+<body>
+<p>Ciudad: <span id="ciudad"></span></p>
+<p>Gastos de envío: <span id="gastos" ></span></p>
+<h1>Fecha de envío: <span id="fecha"></span></h1>
+
+<script>
+function cargarDatos() {
+    var ciudad = document.getElementById("ciudad");
+    var gastos = document.getElementById("gastos");
+    var fecha = document.getElementById("fecha");
+
+    
+    var ciudadUsuario = prompt("Dime la ciudad: ");
+    var gastosUsuario = prompt("Dime los gastos de envio: ");
+    var fechaUsuario = prompt("Dime la fecha de envio: ");
+
+    ciudad.innerHTML = ciudadUsuario;
+    gastos.innerHTML = gastosUsuario + "€";
+    fecha.innerHTML = fechaUsuario;
+    console.log("datos cargados ");
+}
+
+window.onload = cargarDatos;
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio</title>
+</head>
+<body>
+<p>Ciudad: <span id="ciudad"></span></p>
+<p>Gastos de envío: <span id="gastos" ></span></p>
+<h1>Fecha de envío: <span id="fecha"></span></h1>
+
+<script>
+function cargarDatos() {
+    var ciudades_gratis = ["Sevilla", "Madrid", "Valencia", "Barcelona"];
+    var ciudades_gastos = ["Cantabria", "Pontevedra", "Toledo", "Segovia"];
+    var ciudad = document.getElementById("ciudad");
+    var gastos = document.getElementById("gastos");
+    var fecha = document.getElementById("fecha");
+    var titulo = document.querySelector("h1");
+    var hoy = new Date();
+    var fechaHoy = hoy.getDate() + "-" + (hoy.getMonth() + 1) + "-" + hoy.getFullYear();
+    var estaGratis = false;
+    var estaGastos = false;
+
+    var ciudadUsuario = prompt("Introduce la ciudad: ");
+    ciudad.innerHTML = ciudadUsuario;
+
+  
+    for (var i = 0; i < ciudades_gratis.length; i++) {
+        if (ciudades_gratis[i] == ciudadUsuario) {
+            estaGratis = true;
+        }
+    }
+    for (var j = 0; j < ciudades_gastos.length; j++) {
+        if (ciudades_gastos[j] == ciudadUsuario) {
+            estaGastos = true;
+        }
+    }
+
+    if (estaGastos == true) {
+        var gastosUsuario = prompt("Dime los gastos de envio: ");
+        gastos.innerHTML = gastosUsuario + "€";
+        fecha.innerHTML = fechaHoy;
+    } else if (estaGratis == true) {
+        gastos.innerHTML = "Los gastos de envio son gratuitos ";
+        fecha.innerHTML = fechaHoy;
+    } else {
+        gastos.innerHTML = "No se pueden hacer envios a esta ciudadd ";
+        titulo.style.display = "none";
+    }
+    console.log(ciudadUsuario);
+}
+
+window.onload = cargarDatos;
+</script>
+</body>
+</html>

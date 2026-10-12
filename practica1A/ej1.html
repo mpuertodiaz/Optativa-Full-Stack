@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description">
+<title>Ejercicio javascript - Instrucciones básicas DOM</title>
+</head>
+<body>
+<div id="saludar">
+<label for="nombre">Nombre:</label>
+<input type="text" id="nombre">
+<label for="apellido">Apellido:</label>
+<input type="text" id="apellido">
+</div>
+<p id="saludo"></p>
+
+<script>
+var titulo = document.title;
+var inputNombre = document.getElementById("nombre");
+var inputApellido = document.getElementById("apellido");
+var saludo = document.getElementById("saludo");
+var parrafoNuevo = document.createElement("p");
+var labelApellido = document.querySelector("label[for='apellido']");
+
+console.log(titulo);
+console.log(titulo.toUpperCase());
+
+inputNombre.value = "Manuel";
+inputApellido.value = "Puerto";
+
+saludo.innerHTML = "Hola " + inputNombre.value + " " + inputApellido.value;
+
+parrafoNuevo.innerHTML = "¿Qué tal estás?";
+document.body.insertBefore(parrafoNuevo, saludo.nextSibling);
+
+labelApellido.innerHTML = "Apellidos:";
+console.log(labelApellido.innerHTML);
+</script>
+</body>
+</html>

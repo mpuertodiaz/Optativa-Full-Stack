@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 7</title>
+</head>
+<body>
+<p id="parrafo1">JavaScript es un lenguaje de programación que los desarrolladores utilizan para hacer páginas web interactivas.</p>
+<span onclick="aumentarLetra()" style="color: blue; cursor: pointer;">Aumentar letra</span>
+<span onclick="disminuirLetra()" style="color: blue; cursor: pointer;">Disminuir letra</span>
+
+<script>
+let parrafo = document.getElementById("parrafo1");
+let tamano = 16;
+parrafo.style.fontSize = tamano + "px";
+
+function aumentarLetra() {
+    
+    tamano = tamano + 1;
+    parrafo.style.fontSize = tamano + "px";
+    console.log(tamano);
+}
+
+const disminuirLetra = () => {
+    
+    tamano = tamano - 1;
+    parrafo.style.fontSize = tamano + "px";
+    console.log(tamano);
+};
+</script>
+</body>
+</html>

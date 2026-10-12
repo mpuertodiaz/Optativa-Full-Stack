@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio 2</title>
+</head>
+<body>
+<ul>
+    <li><a href="https://www.google.com" onclick="mostrarWeb(this); return false;">Google</a></li>
+    <li><a href="https://www.wikipedia.org" onclick="mostrarWeb(this); return false;">Wikipedia</a></li>
+    <li><a href="https://www.youtube.com" onclick="mostrarWeb(this); return false;">Youtube</a></li>
+</ul>
+<input type="text" id="direccion" size="40">
+
+<script>
+function mostrarWeb(enlace) {
+    var cuadro = document.getElementById("direccion");
+    var direccion = enlace.href;
+
+   
+    cuadro.value = direccion;
+    console.log(direccion);
+}
+</script>
+</body>
+</html>

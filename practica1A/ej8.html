@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista de la compra</title>
+</head>
+<body>
+<h1>Lista de la compra</h1>
+<ul id="lista"></ul>
+<button onclick="anadir()">Añadir</button>
+
+<script>
+function anadir() {
+    let lista = document.getElementById("lista");
+    let producto = prompt("¿Que quieres añadir ?");
+    let nuevoLi = document.createElement("li");
+    let texto = document.createTextNode(producto);
+
+    
+    nuevoLi.appendChild(texto);
+    lista.appendChild(nuevoLi);
+    console.log(producto);
+}
+</script>
+</body>
+</html>
